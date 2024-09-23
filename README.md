@@ -1,0 +1,1 @@
+# plugins-enable-classic-editor
