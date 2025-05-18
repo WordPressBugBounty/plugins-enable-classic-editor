@@ -1,48 +1,69 @@
 === Enable Classic Editor & Widgets ===
-Contributors: AYONM
+Contributors: ayonm
 Donate link: https://www.buymeacoffee.com/ayonm
-Tags: classic editor, enable classic editor, block editor, disable gutenberg, gutenfree, gutenberg, editor 
+Tags: classic editor, enable classic editor, block editor, disable gutenberg, gutenberg 
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.6
+Tested up to: 6.8.1
 Stable tag: trunk
 License: GPLv2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A simple & lightweight plugin to enable the classic editor on WordPress.
+A simple & lightweight plugin to enable the classic editor on WordPress with advanced configuration options.
 
 == Description ==
 
-This is the lightest Classic Editor plugin available, taking up just 3 KBs. Despite the introduction of Gutenberg, a brand new block editor with WordPress 5.x, many users still prefer the Classic Editor due to its compatibility and ease of use. This plugin simply disables Gutenberg and enables the classic editor on your WordPress website.
-
-<strong>*New Update*</strong> - Fixes white blank screen issue on WordPress 6.5+
+This is a lightweight Classic Editor plugin that gives you complete control over when to use the Classic Editor vs the Block Editor (Gutenberg). Despite the introduction of Gutenberg, a brand new block editor with WordPress 5.x, many users still prefer the Classic Editor due to its compatibility and ease of use.
 
 <strong>What does this plugin do?</strong>
 
-* Disables the Gutenberg Block Editor
+* Disables the Gutenberg Block Editor (with granular control)
 * Reverts back to the Classic WordPress Editor
 * Reverts to Classic Widgets section
+* Configure which post types use Classic Editor
+* Configure which user roles use Classic Editor
+* Simple mode for quick setup or Advanced mode for granular control
+* Modern, user-friendly settings interface
 
 <strong>How to use this plugin?</strong>
-It's easy. Just enable and activate it and you're good to go!
 
+* Simple Mode: Just activate the plugin and it works immediately (default)
+* Advanced Mode: Enable "Advanced Settings" to configure per post type and user role
 
 == Frequently Asked Questions ==
 
 = How can I get back the Gutenberg Editor? =
 <br>
-Simply disable this plugin and you'll be back to the brand new Gutenberg Editor.
+You can either disable this plugin, or use the new settings page to configure which post types or user roles should use the Block Editor.
 
 = The plugin doesn't seem to be working? =
 <br>
 Make sure you have at least PHP version 5.6. For the plugin to work, it requires WordPress 4.9 or greater with the Gutenberg installed.
 
+= How do I access the advanced settings? =
+<br>
+After activating the plugin, go to Settings > Classic Editor+ to access the configuration options.
+
 == Screenshots ==
 
 1. WordPress page before plugin activation.
 2. WordPress page after plugin activation.
+3. Modern settings page for granular control.
 
 == Changelog ==
+
+= 3.0 =
+* Added advanced settings page
+* Added post type control
+* Added user role control
+* Added simple/advanced mode toggle
+* Maintained backward compatibility
+* Redesigned settings page with modern UI
+* Added toggle switches for better user experience
+* Improved layout for post type and user role selection
+* Added Reset Defaults button
+* Fixed uninstall process to clean up post meta
+* Various code improvements and optimizations
 
 = 2.7 = 
 * Compatibility Update
