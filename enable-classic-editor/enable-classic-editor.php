@@ -3,8 +3,8 @@
 Plugin Name: Enable Classic Editor & Widgets
 Plugin URI: https://www.ayonm.com
 Description: A simple & lightweight plugin to enable the classic editor on WordPress with advanced configuration options.
-Version: 3.0
-Author: Ayon M
+Version: 3.1
+Author: ayonm
 Author URI: https://www.ayonm.com
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html

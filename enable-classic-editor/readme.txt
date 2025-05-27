@@ -52,6 +52,9 @@ After activating the plugin, go to Settings > Classic Editor+ to access the conf
 
 == Changelog ==
 
+= 3.1 = 
+* General maintenance
+
 = 3.0 =
 * Added advanced settings page
 * Added post type control
