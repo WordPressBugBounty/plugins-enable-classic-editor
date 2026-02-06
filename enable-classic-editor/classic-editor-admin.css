@@ -6,6 +6,53 @@
     max-width: 950px;
 }
 
+/* Mode Indicator */
+.ecew-mode-indicator {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-left: 4px solid #dcdcde;
+    background-color: #f6f7f7;
+    border-radius: 4px;
+}
+
+.ecew-mode-indicator.advanced {
+    border-left-color: #2271b1;
+    background-color: #e7f3ff;
+}
+
+.ecew-mode-indicator.simple {
+    border-left-color: #7cb342;
+    background-color: #f0f5eb;
+}
+
+.mode-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.ecew-mode-indicator.advanced .mode-badge {
+    background-color: #2271b1;
+    color: white;
+}
+
+.ecew-mode-indicator.simple .mode-badge {
+    background-color: #7cb342;
+    color: white;
+}
+
+.mode-description {
+    margin: 0;
+    color: #50575e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 .classic-editor-plus-settings .postbox {
     margin-bottom: 20px;
     border: 1px solid #dcdcde;
@@ -161,13 +208,265 @@ input:checked + .slider:before {
     .checkbox-item {
         flex: 0 0 100%;
     }
-    
+
     .submit-buttons {
         flex-direction: column;
     }
-    
+
     .submit-buttons .button {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* Disabled setting style (for dependency management) */
+.classic-editor-plus-settings .form-table tr.disabled-setting {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.classic-editor-plus-settings .form-table tr.disabled-setting th,
+.classic-editor-plus-settings .form-table tr.disabled-setting td {
+    color: #a7aaad;
+}
+
+/* Save button states */
+.classic-editor-plus-settings #submit {
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.classic-editor-plus-settings #submit.saving {
+    background: #2271b1;
+    border-color: #2271b1;
+    opacity: 0.8;
+    cursor: wait;
+}
+
+.classic-editor-plus-settings #submit.saved {
+    background: #00a32a !important;
+    border-color: #00a32a !important;
+    box-shadow: none !important;
+}
+
+.classic-editor-plus-settings #submit.error {
+    background: #d63638;
+    border-color: #d63638;
+}
+
+/* Toast notifications */
+.ecew-toast {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background: white;
+    border-left: 4px solid #00a32a;
+    padding: 15px 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 999999;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 350px;
+}
+
+.ecew-toast.show {
+    transform: translateX(0);
+}
+
+.ecew-toast.ecew-toast-error {
+    border-left-color: #d63638;
+    color: #d63638;
+}
+
+.ecew-toast.ecew-toast-warning {
+    border-left-color: #dba617;
+    color: #dba617;
+}
+
+.ecew-toast.ecew-toast-success {
+    border-left-color: #00a32a;
+    color: #1d2327;
+}
+
+/* Unsaved changes indicator */
+.unsaved-indicator {
+    color: #dba617;
+    margin-right: 10px;
+    font-size: 13px;
+    animation: pulse 2s infinite;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Modal overlay and dialog */
+.ecew-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999998;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecew-modal {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 550px;
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ecew-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.ecew-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #1d2327;
+}
+
+.ecew-modal-body {
+    padding: 20px 24px;
+    color: #1d2327;
+}
+
+.ecew-modal-body p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.ecew-modal-body ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.ecew-modal-body li {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.ecew-modal-footer {
+    padding: 15px 24px;
+    border-top: 1px solid #dcdcde;
+    text-align: right;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    background: #f6f7f7;
+}
+
+.button-danger {
+    background: #d63638 !important;
+    border-color: #d63638 !important;
+    color: white !important;
+    text-shadow: none !important;
+}
+
+.button-danger:hover,
+.button-danger:focus {
+    background: #c92c2f !important;
+    border-color: #c92c2f !important;
+    color: white !important;
+}
+
+@media screen and (max-width: 600px) {
+    .ecew-modal {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .ecew-modal-footer {
+        flex-direction: column;
+    }
+
+    .ecew-modal-footer .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Help tooltips */
+.ecew-help-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    color: #787c82;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.ecew-help-tooltip .dashicons {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+.ecew-help-tooltip:hover {
+    color: #2271b1;
+}
+
+.ecew-help-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 14px;
+    background: #1d2327;
+    color: white;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 4px;
+    white-space: normal;
+    width: 280px;
+    max-width: 280px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.ecew-help-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1d2327;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10000;
+}
+
+.ecew-help-tooltip:hover::after,
+.ecew-help-tooltip:hover::before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 782px) {
+    .ecew-help-tooltip::after {
+        width: 220px;
+        max-width: 220px;
     }
 }

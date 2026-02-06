@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/ayonm
 Tags: classic editor, enable classic editor, block editor, disable gutenberg, gutenberg 
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.8.1
+Tested up to: 6.8.3
 Stable tag: trunk
 License: GPLv2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -52,7 +52,34 @@ After activating the plugin, go to Settings > Classic Editor+ to access the conf
 
 == Changelog ==
 
-= 3.1 = 
+= 3.2 =
+* New Feature: Animated save button with success confirmation
+* New Feature: Toast notifications for better user feedback
+* New Feature: Unsaved changes detection with warning before navigating away
+* New Feature: Select All/Deselect All buttons for post types and user roles
+* New Feature: Dynamic selection count for post types and user roles
+* New Feature: Contextual help tooltips with detailed explanations
+* New Feature: Last saved timestamp display
+* Improvement: Per-Post Toggle now properly disabled when main plugin is OFF
+* Improvement: Advanced Settings now properly disabled when main plugin is OFF
+* Improvement: Settings validation warnings for conflicting configurations
+* Improvement: "Default" editor choice now shows what editor will actually be used
+* Improvement: Post list column shows actual editor (not just setting) with visual distinction
+* Improvement: Classic Widgets setting includes theme compatibility note
+* Improvement: Custom modal dialog for Reset Defaults (replaces browser confirm)
+* Improvement: Better visual feedback with disabled setting styling
+* Code quality: Improved inline documentation and code organization
+* Major refactoring: Per-Post Toggle and Classic Widgets toggles are now truly independent
+* Fixed critical bug: Classic Widgets toggle now works correctly in simple mode
+* Fixed critical bug: Per-Post Toggle now works correctly in simple mode when Advanced Settings is disabled
+* Improved UX: Added visual mode indicator (Simple vs Advanced) on settings page
+* Improved UX: Enhanced help text for all settings
+* Improved UX: Better JavaScript to prevent auto-enabling Advanced Settings
+* Fixed: Reset Defaults button now correctly resets all toggles including Classic Widgets
+* Code quality improvements and better inline documentation
+* And of course, General maintenance
+
+= 3.1 =
 * General maintenance
 
 = 3.0 =

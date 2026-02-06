@@ -12,7 +12,13 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 
 // Delete plugin options
 delete_option('ecew_settings');
+delete_option('ecew_settings_last_saved');
 
-// Delete post meta data
+// Delete post meta data using prepared statement for security
 global $wpdb;
-$wpdb->query("DELETE FROM {$wpdb->postmeta} WHERE meta_key = '_ecew_editor_choice'");
+$wpdb->query(
+    $wpdb->prepare(
+        "DELETE FROM {$wpdb->postmeta} WHERE meta_key = %s",
+        '_ecew_editor_choice'
+    )
+);
